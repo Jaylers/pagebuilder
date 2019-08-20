@@ -2,8 +2,8 @@ import React from 'react';
 import logo from './asset/logo.svg';
 import './css/App.css';
 import { Button } from 'reactstrap';
-import {} from './component/Header';
 import Header from "./component/Header";
+import { Container, Row, Col } from 'reactstrap';
 
 function App() {
   return (
@@ -12,6 +12,14 @@ function App() {
       <Header/>
 
         <div className="App">
+            <Container>
+                <Row>
+                    <Col xs="2">
+
+                    </Col>
+                    <Col xs="auto">.col-auto - variable width content</Col>
+                </Row>
+            </Container>
             <div className="m-lg-1 m-sm-1 m-md-1">
                 HHHHH
             </div>
