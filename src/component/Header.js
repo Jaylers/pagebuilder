@@ -28,54 +28,34 @@ export default class Header extends React.Component {
     }
     render() {
         return (
-            <div>
-                <Navbar color="light" light expand="md">
-                    <NavbarBrand href="/">JAYLERS</NavbarBrand>
-                    <NavbarToggler onClick={this.toggle} />
-                    <Collapse isOpen={this.state.isOpen} navbar>
-                        <Nav className="ml-auto" navbar>
-                            <NavItem>
-                                <NavLink href="/components/">Home</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="/components/">Timeline</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="/components/">Experience</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="/components/">Favorite</NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink href="https://github.com/Jaylers">GitHub</NavLink>
-                            </NavItem>
-                            <UncontrolledDropdown nav inNavbar>
-                                <DropdownToggle nav caret>
-                                    More
-                                </DropdownToggle>
-                                <DropdownMenu right>
-                                    <DropdownItem>
-                                        <NavLink href="https://www.facebook.com/Jaylerrs">Facebook</NavLink>
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        <NavLink href="https://twitter.com/mrJaylers">Twitter</NavLink>
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        <NavLink href="https://www.instagram.com/jayler.s">Instagram</NavLink>
-                                    </DropdownItem>
-                                    <DropdownItem divider />
-                                    <DropdownItem>
-                                        <NavLink href="/signup">Sign up</NavLink>
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        <NavLink href="/signin">Sign in</NavLink>
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledDropdown>
-                        </Nav>
-                    </Collapse>
-                </Navbar>
-            </div>
+            <Navbar color="light" light expand="md">
+                <NavbarBrand href="/">JAYLERS</NavbarBrand>
+                <NavbarToggler onClick={this.toggle} />
+                <Collapse isOpen={this.state.isOpen} navbar>
+                    <Nav className="ml-auto" navbar>
+                        <NavItem>
+                            <NavLink>Hello, </NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink>Guest</NavLink>
+                        </NavItem>
+                        <UncontrolledDropdown nav inNavbar>
+                            <DropdownToggle nav caret>
+                                More
+                            </DropdownToggle>
+                            <DropdownMenu right>
+                                <DropdownItem>
+                                    <NavLink href="/login">Login</NavLink>
+                                </DropdownItem>
+                                <DropdownItem divider />
+                                <DropdownItem>
+                                    <NavLink href="/help">Help!</NavLink>
+                                </DropdownItem>
+                            </DropdownMenu>
+                        </UncontrolledDropdown>
+                    </Nav>
+                </Collapse>
+            </Navbar>
         );
     }
 }

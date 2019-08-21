@@ -7,13 +7,19 @@ import Sidebar from "./component/Sidebar";
 function App() {
   return (
     <div className="App">
-        <Header/>
-        <div className="menu">
-            <Sidebar/>
+        <div className="topBar">
+            <Header/>
         </div>
-        <div className="content">
-            <Welcome/>
+
+        <div className="mainBar">
+            <div className="menu">
+                <Sidebar/>
+            </div>
+            <div className="content">
+                <Welcome/>
+            </div>
         </div>
+
     </div>
   );
 }
