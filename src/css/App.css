@@ -8,6 +8,36 @@
   pointer-events: none;
 }
 
+.AppBackground {
+  background: whitesmoke;
+}
+
+.textWhite {
+  color: white;
+}
+
+.menu {
+  width: 240px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 56px;
+  background: #db3d44;
+}
+
+.metismenu {
+  position: fixed;
+  width: 280px;
+
+  bottom: 0;
+  left: 0;
+  top: 0;
+}
+
+.content {
+  margin-left: 240px;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

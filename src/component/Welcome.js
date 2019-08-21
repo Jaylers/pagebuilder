@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from "../asset/logo.svg";
+import Sidebar from "./Sidebar";
 
 export default class Welcome extends React.Component {
     render() {

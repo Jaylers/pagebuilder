@@ -38,6 +38,15 @@ export default class Header extends React.Component {
                                 <NavLink href="/components/">Home</NavLink>
                             </NavItem>
                             <NavItem>
+                                <NavLink href="/components/">Timeline</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/components/">Experience</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink href="/components/">Favorite</NavLink>
+                            </NavItem>
+                            <NavItem>
                                 <NavLink href="https://github.com/Jaylers">GitHub</NavLink>
                             </NavItem>
                             <UncontrolledDropdown nav inNavbar>
