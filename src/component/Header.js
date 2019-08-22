@@ -8,6 +8,7 @@ import {
     NavItem,
     NavLink} from 'reactstrap';
 import Sidebar from "./Sidebar";
+import CopyRight from "./control/CopyRight";
 
 export default class Header extends React.Component {
     constructor(props) {
@@ -26,12 +27,10 @@ export default class Header extends React.Component {
     render() {
         return (
             <Navbar color="light" light expand="md">
-                <NavbarBrand href="/">JAYLERS</NavbarBrand>
+                <NavbarBrand href="/">JAYLERS INFINITE</NavbarBrand>
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
-                    <Nav className="ml-auto" navbar>
 
-                    </Nav>
                     <Nav className="ml-auto" navbar>
                         <br/>
 
@@ -82,6 +81,12 @@ export default class Header extends React.Component {
                                 </NavItem>
                             </Navbar>
                         </NavLink>
+
+                        <Navbar>
+                            <NavItem className="copyRightTop">
+                                <CopyRight/>
+                            </NavItem>
+                        </Navbar>
 
                         {/*<Navbar>*/}
                         {/*    <UncontrolledDropdown nav inNavbar>*/}

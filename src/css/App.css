@@ -48,6 +48,7 @@
   background: #282c34;
 }
 
+/*mobile screen*/
 @media (max-width: 767px){
   .menuBar {
     display: none;
@@ -65,8 +66,17 @@
     background-color: #282c34;
     color: white;
   }
+
+  .copyRightTop {
+    width: 100%;
+    color: gray;
+    font-size: 10px;
+    padding-top: 10px;
+    text-align: center;
+  }
 }
 
+/*desktop screen*/
 @media (min-width: 768px){
   .menuBar {
     width: 240px;
@@ -79,6 +89,10 @@
 
   .navColor {
     color: #282c34;
+  }
+
+  .copyRightTop {
+    display: none;
   }
 }
 

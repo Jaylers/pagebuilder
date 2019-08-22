@@ -3,6 +3,7 @@ import './css/App.css';
 import Header from "./component/Header";
 import Welcome from "./component/Welcome";
 import Sidebar from "./component/Sidebar";
+import CopyRight from "./component/control/CopyRight";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
             <div className="menuBar">
                 <Sidebar/>
                 <div className="copyRight">
-                    Copyright &copy; 2019 Jaylers 2019 All right Reserved.
+                    <CopyRight/>
                 </div>
             </div>
             <div className="content">
