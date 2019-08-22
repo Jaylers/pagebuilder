@@ -12,8 +12,11 @@ function App() {
         </div>
 
         <div className="mainBar">
-            <div className="menu">
+            <div className="menuBar">
                 <Sidebar/>
+                <div className="copyRight">
+                    Copyright &copy; 2019 Jaylers 2019 All right Reserved.
+                </div>
             </div>
             <div className="content">
                 <Welcome/>

@@ -1,0 +1,94 @@
+
+.menuHeader {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-left: 20px;
+  height: 42px;
+  font-size: 20px;
+  font-weight: 600;
+  border-left: red solid 2px;
+  border-right: red solid 2px;
+}
+
+.menuHeader:hover {
+  color: silver;
+}
+
+.menuItem {
+  border-bottom: #282c34 solid 2px;
+  border-top: #282c34 solid 2px;
+  border-left: red solid 2px;
+  height: 65px;
+  vertical-align: middle;
+  background: #353E45;
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  background-color: #232d33;
+}
+
+.menuItem2:hover {
+  background: url("./../asset/logo.svg") no-repeat #232d33 left top 8px;
+  background-size: 65px auto;
+}
+
+.menuItem:active {
+  color: whitesmoke;
+  font-weight: bold;
+  background: #232d33;
+}
+
+.navImgItem {
+  width: 45px;
+  height: 45px;
+  padding: 10px;
+}
+
+.content {
+  margin-left: 240px;
+}
+
+.App-header {
+  background-color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.navMenuIcon {
+  width: auto;
+  height: 45px;
+  display: block;
+  transition: all 0.3s;
+  cursor: pointer;
+  padding: 12px;
+  box-sizing: border-box;
+  color: white;
+}
+
+.navMenuIcon:hover{
+  color: red;
+}
+
+.navMenuIcon span {
+  font-size: 18px;
+  margin-right: 8px;
+  font-weight: bold;
+  line-height: 26px;
+  vertical-align: top;
+  color: white;
+}
+
+.nav-link {
+  padding: 0 !important;
+  color: white;
+}
+
+.nav-link:hover {
+  color: whitesmoke;
+}

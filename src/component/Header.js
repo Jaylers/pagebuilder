@@ -33,26 +33,55 @@ export default class Header extends React.Component {
                 <NavbarToggler onClick={this.toggle} />
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="ml-auto" navbar>
-                        <NavItem>
-                            <NavLink>Hello, </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink>Guest</NavLink>
-                        </NavItem>
-                        <UncontrolledDropdown nav inNavbar>
-                            <DropdownToggle nav caret>
-                                More
-                            </DropdownToggle>
-                            <DropdownMenu right>
-                                <DropdownItem>
-                                    <NavLink href="/login">Login</NavLink>
-                                </DropdownItem>
-                                <DropdownItem divider />
-                                <DropdownItem>
-                                    <NavLink href="/help">Help!</NavLink>
-                                </DropdownItem>
-                            </DropdownMenu>
-                        </UncontrolledDropdown>
+
+                    </Nav>
+                    <Nav className="ml-auto" navbar>
+                        <Navbar>
+                            <NavItem>
+                                <NavLink href={"/home"}>Home</NavLink>
+                            </NavItem>
+                        </Navbar>
+                        <Navbar>
+                            <NavItem>
+                                <NavLink href={"/timeline"}>Timeline</NavLink>
+                            </NavItem>
+                        </Navbar>
+                        <Navbar>
+                            <NavItem>
+                                <NavLink href={"/experience"}>Experience</NavLink>
+                            </NavItem>
+                        </Navbar>
+                        <Navbar>
+                            <NavItem>
+                                <NavLink href={"/hobby"}>Hobby</NavLink>
+                            </NavItem>
+                        </Navbar>
+                        <Navbar>
+                            <NavItem>
+                                <NavLink href={"/about"}>About me</NavLink>
+                            </NavItem>
+                        </Navbar>
+                        <Navbar>
+                            <NavItem>
+                                <NavLink href={"/login"}>Login</NavLink>
+                            </NavItem>
+                        </Navbar>
+                        {/*<Navbar>*/}
+                        {/*    <UncontrolledDropdown nav inNavbar>*/}
+                        {/*        <DropdownToggle nav caret>*/}
+                        {/*            Admin*/}
+                        {/*        </DropdownToggle>*/}
+                        {/*        <DropdownMenu right>*/}
+                        {/*            <DropdownItem>*/}
+                        {/*                <NavLink href="/login">Login</NavLink>*/}
+                        {/*            </DropdownItem>*/}
+                        {/*            <DropdownItem divider />*/}
+                        {/*            <DropdownItem>*/}
+                        {/*                <NavLink href="/help">Help!</NavLink>*/}
+                        {/*            </DropdownItem>*/}
+                        {/*        </DropdownMenu>*/}
+                        {/*    </UncontrolledDropdown>*/}
+                        {/*</Navbar>*/}
                     </Nav>
                 </Collapse>
             </Navbar>

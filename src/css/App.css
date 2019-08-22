@@ -36,7 +36,16 @@
   top: 0;
   margin-bottom: 0;
   border: none;
-  border-bottom: 10px solid #171a1c;
+  border-bottom: 5px solid #171a1c;
+}
+
+.menuBar {
+  width: 240px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  color: white;
+  background: #282c34;
 }
 
 .mainBar {
@@ -52,75 +61,6 @@
   bottom: 0;
   left: 0;
   right: 0;
-}
-.menu {
-  width: 240px;
-  height: 100%;
-  position: fixed;
-  left: 0;
-  color: white;
-  background: #282c34;
-}
-
-.menuHeader {
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding-left: 20px;
-  height: 42px;
-  font-size: 20px;
-  font-weight: 600;
-  border-left: red solid 2px;
-  border-right: red solid 2px;
-}
-
-.menuHeader:hover {
-  color: silver;
-}
-
-.menuItem {
-  border-bottom: #282c34 solid 2px;
-  border-left: red solid 2px;
-  padding-left: 60px !important;
-  height: 65px;
-  background: #353E45;
-}
-
-.mHome {
-  background: url("./../asset/logo.svg") no-repeat #353E45 left top 8px;
-  background-size: 65px auto;
-}
-
-.mTimeline {
-  background: url("./../asset/logo.svg") no-repeat #353E45 left top 8px;
-  background-size: 65px auto;
-}
-
-.mExp {
-  background: url("./../asset/logo.svg") no-repeat #353E45 left top 8px;
-  background-size: 65px auto;
-}
-
-.mFavorite {
-  background: url("./../asset/logo.svg") no-repeat #353E45 left top 8px;
-  background-size: 65px auto;
-}
-
-.mAboutMe {
-  background: url("./../asset/logo.svg") no-repeat #353E45 left top 8px;
-  background-size: 65px auto;
-}
-.menuItem:hover {
-  background: url("./../asset/logo.svg") no-repeat #232d33 left top 8px;
-  background-size: 65px auto;
-}
-
-.menuItem:active {
-  color: red;
-  font-weight: bold;
-}
-
-.content {
-  margin-left: 240px;
 }
 
 .App-header {
@@ -145,4 +85,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.copyRight {
+  position: fixed;
+  width: 240px;
+  bottom: 5px;
+  color: gray;
+  font-size: 10px;
 }
