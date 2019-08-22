@@ -6,11 +6,8 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
-    UncontrolledDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem } from 'reactstrap';
+    NavLink} from 'reactstrap';
+import Sidebar from "./Sidebar";
 
 export default class Header extends React.Component {
     constructor(props) {
@@ -36,36 +33,56 @@ export default class Header extends React.Component {
 
                     </Nav>
                     <Nav className="ml-auto" navbar>
-                        <Navbar>
-                            <NavItem>
-                                <NavLink href={"/home"}>Home</NavLink>
-                            </NavItem>
-                        </Navbar>
-                        <Navbar>
-                            <NavItem>
-                                <NavLink href={"/timeline"}>Timeline</NavLink>
-                            </NavItem>
-                        </Navbar>
-                        <Navbar>
-                            <NavItem>
-                                <NavLink href={"/experience"}>Experience</NavLink>
-                            </NavItem>
-                        </Navbar>
-                        <Navbar>
-                            <NavItem>
-                                <NavLink href={"/hobby"}>Hobby</NavLink>
-                            </NavItem>
-                        </Navbar>
-                        <Navbar>
-                            <NavItem>
-                                <NavLink href={"/about"}>About me</NavLink>
-                            </NavItem>
-                        </Navbar>
-                        <Navbar>
-                            <NavItem>
-                                <NavLink href={"/login"}>Login</NavLink>
-                            </NavItem>
-                        </Navbar>
+                        <br/>
+
+                        <NavLink className="headerBarItemText" href={"/home"}>
+                            <Navbar className="headerBarItem">
+                                <NavItem>
+                                    Home
+                                </NavItem>
+                            </Navbar>
+                        </NavLink>
+
+                        <NavLink href={"/timeline"}>
+                            <Navbar className="headerBarItem">
+                                <NavItem>
+                                    Timeline
+                                </NavItem>
+                            </Navbar>
+                        </NavLink>
+
+                        <NavLink href={"/experience"}>
+                            <Navbar className="headerBarItem">
+                                <NavItem>
+                                    Experience
+                                </NavItem>
+                            </Navbar>
+                        </NavLink>
+
+                        <NavLink href={"/hobby"}>
+                            <Navbar className="headerBarItem">
+                                <NavItem>
+                                    Hobby
+                                </NavItem>
+                            </Navbar>
+                        </NavLink>
+
+                        <NavLink href={"/about"}>
+                            <Navbar className="headerBarItem">
+                                <NavItem>
+                                    About me
+                                </NavItem>
+                            </Navbar>
+                        </NavLink>
+
+                        <NavLink href={"/login"}>
+                            <Navbar className="headerBarItem">
+                                <NavItem>
+                                    Login
+                                </NavItem>
+                            </Navbar>
+                        </NavLink>
+
                         {/*<Navbar>*/}
                         {/*    <UncontrolledDropdown nav inNavbar>*/}
                         {/*        <DropdownToggle nav caret>*/}

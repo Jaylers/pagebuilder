@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
+import { Nav, NavItem} from '@trendmicro/react-sidenav';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 import Navbar from "reactstrap/es/Navbar";
 import NavbarBrand from "reactstrap/es/NavbarBrand";
@@ -35,7 +35,7 @@ export default class Sidebar extends React.Component {
                 <NavLink href={"/home"}>
                     <Navbar className="menuItem">
                         <NavItem eventKey="Home">
-                            <img className="navImgItem" src={Code}/> Home
+                            <img className="navImgItem" src={Code} alt={"Home"}/> Home
                         </NavItem>
                     </Navbar>
                 </NavLink>
@@ -43,7 +43,7 @@ export default class Sidebar extends React.Component {
                 <NavLink href={"/timeline"}>
                     <Navbar className="menuItem">
                         <NavItem eventKey="Timeline">
-                            <img className="navImgItem" src={timeline}/> Timeline
+                            <img className="navImgItem" src={timeline} alt={"Timeline"}/> Timeline
                         </NavItem>
                     </Navbar>
                 </NavLink>
@@ -51,7 +51,7 @@ export default class Sidebar extends React.Component {
                 <NavLink href={"/experience"}>
                     <Navbar className="menuItem">
                         <NavItem eventKey="Experience">
-                            <img className="navImgItem" src={coding}/> Experience
+                            <img className="navImgItem" src={coding} alt={"Experience"}/> Experience
                         </NavItem>
                     </Navbar>
                 </NavLink>
@@ -59,7 +59,7 @@ export default class Sidebar extends React.Component {
                 <NavLink href={"/hobby"}>
                     <Navbar className="menuItem">
                         <NavItem eventKey="Hobby">
-                            <img className="navImgItem" src={hobby} alt={"Hobby"}/> Hobby
+                            <img className="navImgItem" src={hobby} alt={"Hobby"} /> Hobby
                         </NavItem>
                     </Navbar>
                 </NavLink>
@@ -67,7 +67,7 @@ export default class Sidebar extends React.Component {
                 <NavLink href={"/about"}>
                     <Navbar className="menuItem">
                         <NavItem eventKey="About me">
-                            <img className="navImgItem" src={geek}/> About me
+                            <img className="navImgItem" src={geek} alt={"About me"}/> About me
                         </NavItem>
                     </Navbar>
                 </NavLink>
