@@ -48,6 +48,19 @@
   background: #282c34;
 }
 
+.content {
+  display: block;
+  padding: 2px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  word-wrap: break-word;
+  height: 100%;
+}
+
+.headerBarItem {
+  cursor: pointer;
+}
+
 /*mobile screen*/
 @media (max-width: 767px){
   .menuBar {
@@ -85,6 +98,10 @@
     left: 0;
     color: white;
     background: #282c34;
+  }
+
+  .content {
+    margin-left: 240px;
   }
 
   .navColor {
