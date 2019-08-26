@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
 import './../css/App.css';
 import './../css/SideBar.css'
-import Welcome from "./../component/Welcome";
+import Welcome from "./Welcome";
 import CopyRight from "./../component/control/CopyRight";
 import logo from "./../asset/logo.svg";
 import Code from "./../asset/code.png";
@@ -9,11 +9,11 @@ import timeline from "./../asset/timeline.png";
 import coding from "./../asset/coding.png";
 import hobby from "./../asset/hobby.png";
 import geek from "./../asset/geek.png";
-import Home from "./../component/Home";
-import TimeLine from "./../component/TimeLine";
-import Experience from "./../component/Experience";
-import AboutMe from "./../component/AboutMe";
-import Hobby from "./../component/Hobby";
+import Home from "./Home";
+import TimeLine from "./TimeLine";
+import Experience from "./Experience";
+import AboutMe from "./AboutMe";
+import Hobby from "./Hobby";
 
 import {Nav as NavLeft, NavItem as NavItemLeft} from "@trendmicro/react-sidenav";
 import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink} from 'reactstrap';
