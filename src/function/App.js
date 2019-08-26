@@ -102,7 +102,7 @@ function App() {
                                 </Navbar>
                             </NavLink>
 
-                            <NavLink href="/login">
+                            <NavLink href="/">
                                 <Navbar className="headerBarItem">
                                     <NavItem>
                                         Login
