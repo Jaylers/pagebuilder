@@ -30,3 +30,11 @@ export const HttpStatus = {
     INTERNAL_SERVER_ERROR : {"500": "Server Error"},
     BAD_GATEWAY : {"502": "Bad Gateway"}
 };
+
+export const ReqMethod = {
+    GET : "GET",
+    POST : "POST",
+    PUR : "PUT",
+    PATCH : "PATCH",
+    DELETE : "DELETE"
+};

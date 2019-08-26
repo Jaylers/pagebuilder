@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import Button from "reactstrap/es/Button";
 import Cookies from 'universal-cookie';
-import {Application} from "../utils/Constant";
+import {Application, ReqMethod} from "../utils/Constant";
+import {ServiceApi} from "../service/ServiceApi";
 
 export default function LoginPage() {
     const cookies = new Cookies();
@@ -9,6 +10,15 @@ export default function LoginPage() {
 
     const [username, typingUsername] = useState("");
     const [password, typingPassword] = useState("");
+
+    function reqListener () {
+        console.log(this.responseText);
+    }
+
+    let call = new XMLHttpRequest();
+    call.addEventListener("load", reqListener);
+    call.open(ReqMethod.GET, ServiceApi.news);
+    call.send();
 
     function AttemptToLogin() {
         if (checkAuth()){
