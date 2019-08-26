@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Hobby() {
+export default function TimeLineFragment() {
     return (
         <div className="App">
-            Hobby
+            Timeline
         </div>
     );
 }

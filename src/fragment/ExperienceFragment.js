@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function Home() {
+export default function ExperienceFragment() {
     return (
         <div className="App">
-            Home
+            Experience
         </div>
     );
 }

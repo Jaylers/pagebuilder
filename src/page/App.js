@@ -1,26 +1,27 @@
 import React, { useState} from 'react';
-import '../zcss/App.css';
-import '../zcss/SideBar.css'
-import Welcome from "./Welcome";
-import CopyRight from "./control/CopyRight";
-import logo from "../zasset/logo.svg";
-import Code from "../zasset/code.png";
-import timeline from "../zasset/timeline.png";
-import coding from "../zasset/coding.png";
-import hobby from "../zasset/hobby.png";
-import geek from "../zasset/geek.png";
-import Home from "./Home";
-import TimeLine from "./TimeLine";
-import Experience from "./Experience";
-import AboutMe from "./AboutMe";
-import Hobby from "./Hobby";
+import '../asset/css/App.css';
+import '../asset/css/SideBar.css'
+import logo from "../asset/logo.svg";
+import Code from "../asset/code.png";
+import timeline from "../asset/timeline.png";
+import coding from "../asset/coding.png";
+import hobby from "../asset/hobby.png";
+import geek from "../asset/geek.png";
 
 import {Nav as NavLeft, NavItem as NavItemLeft} from "@trendmicro/react-sidenav";
 import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink} from 'reactstrap';
 import {Path} from "../utils/Constant";
+import WelcomeFragment from "../fragment/WelcomeFragment";
+import HomeFragment from "../fragment/HomeFragment";
+import TimeLineFragment from "../fragment/TimeLineFragment";
+import ExperienceFragment from "../fragment/ExperienceFragment";
+import HobbyFragment from "../fragment/HobbyFragment";
+import AboutFragment from "../fragment/AboutFragment";
+import LoginPage from "./LoginPage";
+import CopyRight from "../fragment/control/CopyRight";
 
 function App() {
-    const [page, setPage] = useState(Welcome());
+    const [page, setPage] = useState(WelcomeFragment());
     const [current, setCurrent] = useState(Path.welcome);
     const [isOpen, setToggle] = useState(false);
 
@@ -28,19 +29,19 @@ function App() {
         console.log(selectedPath);
         setCurrent(selectedPath);
         if (selectedPath.includes(Path.home)){
-            setPage(Home());
+            setPage(HomeFragment);
         } else if (selectedPath.includes(Path.timeline)){
-            setPage(TimeLine());
+            setPage(TimeLineFragment);
         } else if (selectedPath.includes(Path.experience)){
-            setPage(Experience);
+            setPage(ExperienceFragment);
         } else if (selectedPath.includes(Path.hobby)){
-            setPage(Hobby);
+            setPage(HobbyFragment);
         }else if (selectedPath.includes(Path.about)){
-            setPage(AboutMe);
+            setPage(AboutFragment);
         }else if (selectedPath.includes(Path.login)){
-            setPage(Welcome);
+            setPage(LoginPage);
         }else {
-            setPage(Welcome);
+            setPage(WelcomeFragment);
         }
     }
 
@@ -102,7 +103,7 @@ function App() {
                                 </Navbar>
                             </NavLink>
 
-                            <NavLink href="/">
+                            <NavLink href="/login">
                                 <Navbar className="headerBarItem">
                                     <NavItem>
                                         Login
@@ -112,7 +113,7 @@ function App() {
 
                             <Navbar>
                                 <NavItem className="copyRightTop">
-                                    {CopyRight()}
+                                    {CopyRight}
                                 </NavItem>
                             </Navbar>
                         </Nav>
@@ -142,7 +143,7 @@ function App() {
                                  active={isActive(Path.home)}>
                             <Navbar className="menuItem">
                                 <NavItemLeft eventKey="Home">
-                                    <img className="navImgItem" src={Code} alt={"Home"}/> Home
+                                    <img className="navImgItem" src={Code} alt={"HomeFragment"}/> Home
                                 </NavItemLeft>
                             </Navbar>
                         </NavLink>
@@ -169,7 +170,7 @@ function App() {
                                  active={isActive(Path.hobby)}>
                             <Navbar className="menuItem">
                                 <NavItemLeft eventKey="Hobby">
-                                    <img className="navImgItem" src={hobby} alt={"Hobby"} /> Hobby
+                                    <img className="navImgItem" src={hobby} alt={"HobbyFragment"} /> Hobby
                                 </NavItemLeft>
                             </Navbar>
                         </NavLink>
