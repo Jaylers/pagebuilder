@@ -1,0 +1,108 @@
+.login-container {
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+
+.login-container::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #2c9dff;
+    background: -webkit-linear-gradient(bottom, #005bea, #00c6fb);
+    background: -o-linear-gradient(bottom, #005bea, #00c6fb);
+    background: -moz-linear-gradient(bottom, #005bea, #00c6fb);
+    background: linear-gradient(bottom, #005bea, #00c6fb);
+    opacity: 0.9;
+}
+
+.bg-url {
+    background-image: url("https://www.accruent.com/sites/default/files/styles/resource_image/public/resource-images/case-study-images/seattle-skyline-dusk-lighting-1000x550.jpg?itok=R6z9gM2v");
+}
+
+.login-form {
+    margin: 20vh auto auto;
+    width: max-content;
+    height: max-content;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.login-brand {
+    width: 200px;
+    margin-bottom: 30px;
+    pointer-events: none;
+}
+
+.login-input {
+    width: 300px;
+    padding: 8px;
+    border-radius: 20px;
+    color: black;
+    text-align: center;
+    border: 1px solid silver;
+}
+
+.login-btn {
+    width: 300px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    padding: 8px;
+    border-radius: 20px;
+    background-color: #333;
+}
+
+.login-btn:hover {
+    text-shadow: 0px 0px 10px whitesmoke;
+}
+
+.login-btn:hover {
+    color: dodgerblue;
+    text-shadow: 0px 0px 10px pink;
+}
+
+
+.login-href {
+    margin-top: 40px;
+    color: whitesmoke;
+}
+
+.login-href:hover {
+    text-shadow: 4px 4px 6px black;
+    color: white;
+    text-decoration: none;
+}
+
+.login-create {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 20px;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.login-create:hover {
+    text-shadow: 4px 4px 6px black;
+    color: white;
+    text-decoration: none;
+}
