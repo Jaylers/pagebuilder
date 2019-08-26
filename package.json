@@ -9,13 +9,16 @@
     "@trendmicro/react-sidenav": "^0.4.5",
     "bootstrap": "^4.3.1",
     "react": "^16.9.0",
+    "react-cookie": "^4.0.1",
     "react-dom": "^16.9.0",
     "react-flexbox-grid": "^2.1.2",
     "react-metismenu": "^1.4.0",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
     "react-sticky": "^5.0.8",
-    "reactstrap": "^8.0.1"
+    "reactstrap": "^8.0.1",
+    "universal-cookie-express": "^4.0.1",
+    "universal-cookie": "latest"
   },
   "scripts": {
     "start": "react-scripts start",
