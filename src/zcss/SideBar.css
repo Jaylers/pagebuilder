@@ -29,7 +29,7 @@
 }
 
 .menuItem2:hover {
-  background: url("./../asset/logo.svg") no-repeat #232d33 left top 8px;
+  background: url("../zasset/logo.svg") no-repeat #232d33 left top 8px;
   background-size: 65px auto;
 }
 

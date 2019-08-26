@@ -1,14 +1,14 @@
 import React, { useState} from 'react';
-import './../css/App.css';
-import './../css/SideBar.css'
+import '../zcss/App.css';
+import '../zcss/SideBar.css'
 import Welcome from "./Welcome";
-import CopyRight from "./../component/control/CopyRight";
-import logo from "./../asset/logo.svg";
-import Code from "./../asset/code.png";
-import timeline from "./../asset/timeline.png";
-import coding from "./../asset/coding.png";
-import hobby from "./../asset/hobby.png";
-import geek from "./../asset/geek.png";
+import CopyRight from "./control/CopyRight";
+import logo from "../zasset/logo.svg";
+import Code from "../zasset/code.png";
+import timeline from "../zasset/timeline.png";
+import coding from "../zasset/coding.png";
+import hobby from "../zasset/hobby.png";
+import geek from "../zasset/geek.png";
 import Home from "./Home";
 import TimeLine from "./TimeLine";
 import Experience from "./Experience";
