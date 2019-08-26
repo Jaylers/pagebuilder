@@ -1,11 +1,9 @@
 import React from 'react';
 
-export default class Welcome extends React.Component {
-    render() {
-        return (
-            <div className="App">
-                Timeline
-            </div>
-        );
-    }
+export default function TimeLine() {
+    return (
+        <div className="App">
+            Timeline
+        </div>
+    );
 }

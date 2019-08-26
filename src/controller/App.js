@@ -17,32 +17,34 @@ import Hobby from "./../component/Hobby";
 
 import {Nav as NavLeft, NavItem as NavItemLeft} from "@trendmicro/react-sidenav";
 import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink} from 'reactstrap';
+import {Path} from "../utils/Constant";
 
 function App() {
+    const [page, setPage] = useState(Welcome());
+    const [current, setCurrent] = useState(Path.welcome);
+    const [isOpen, setToggle] = useState(false);
 
-    const uuu =  window.location.href;
-    function url() {
-        console.log(uuu);
-        if (uuu.includes("home")){
-            return <Home/>
-        } else if (uuu.includes("timeline")){
-            return <TimeLine/>
-        } else if (uuu.includes("experience")){
-            return <Experience/>
-        } else if (uuu.includes("hobby")){
-            return <Hobby/>
-        }else if (uuu.includes("about")){
-            return <AboutMe/>
-        }else if (uuu.includes("login")){
-            return <Welcome/>
+    function resetPage(selectedPath) {
+        console.log(selectedPath);
+        setCurrent(selectedPath);
+        if (selectedPath.includes(Path.home)){
+            setPage(Home());
+        } else if (selectedPath.includes(Path.timeline)){
+            setPage(TimeLine());
+        } else if (selectedPath.includes(Path.experience)){
+            setPage(Experience);
+        } else if (selectedPath.includes(Path.hobby)){
+            setPage(Hobby);
+        }else if (selectedPath.includes(Path.about)){
+            setPage(AboutMe);
+        }else if (selectedPath.includes(Path.login)){
+            setPage(Welcome);
         }else {
-            return <Welcome/>
+            setPage(Welcome);
         }
     }
 
-    const [page, setPage] = useState(url());
-    const [isOpen, setToggle] = useState(false);
-
+    function isActive(self) { return current === self }
 
     return (
         <div className="App">
@@ -54,8 +56,9 @@ function App() {
 
                         <Nav className="ml-auto" navbar>
                             <br/>
-
-                            <NavLink className="headerBarItemText" onClick={ () => setPage(<Home/>)} >
+                            <NavLink className="headerBarItemActive"
+                                     onClick={ () => resetPage(Path.home)}
+                                     active={isActive(Path.home)}>
                                 <Navbar className="headerBarItem">
                                     <NavItem>
                                         Home
@@ -63,7 +66,8 @@ function App() {
                                 </Navbar>
                             </NavLink>
 
-                            <NavLink onClick={ () => setPage(<TimeLine/>)}>
+                            <NavLink onClick={ () => resetPage(Path.timeline)}
+                                     active={isActive(Path.timeline)}>
                                 <Navbar className="headerBarItem">
                                     <NavItem>
                                         Timeline
@@ -71,7 +75,8 @@ function App() {
                                 </Navbar>
                             </NavLink>
 
-                            <NavLink onClick={ () => setPage(<Experience/>)}>
+                            <NavLink onClick={ () => resetPage(Path.experience)}
+                                     active={isActive(Path.experience)}>
                                 <Navbar className="headerBarItem">
                                     <NavItem>
                                         Experience
@@ -79,7 +84,8 @@ function App() {
                                 </Navbar>
                             </NavLink>
 
-                            <NavLink onClick={ () => setPage(<Hobby/>)} >
+                            <NavLink onClick={ () => resetPage(Path.hobby)}
+                                     active={isActive(Path.hobby)}>
                                 <Navbar className="headerBarItem">
                                     <NavItem>
                                         Hobby
@@ -87,7 +93,8 @@ function App() {
                                 </Navbar>
                             </NavLink>
 
-                            <NavLink onClick={ () => setPage(<AboutMe/>)} >
+                            <NavLink onClick={ () => resetPage(Path.about)}
+                                     active={isActive(Path.about)}>
                                 <Navbar className="headerBarItem">
                                     <NavItem>
                                         About me
@@ -95,7 +102,7 @@ function App() {
                                 </Navbar>
                             </NavLink>
 
-                            <NavLink onClick={ () => setPage(<Welcome/>)}>
+                            <NavLink href="/login">
                                 <Navbar className="headerBarItem">
                                     <NavItem>
                                         Login
@@ -105,7 +112,7 @@ function App() {
 
                             <Navbar>
                                 <NavItem className="copyRightTop">
-                                    <CopyRight/>
+                                    {CopyRight()}
                                 </NavItem>
                             </Navbar>
                         </Nav>
@@ -121,17 +128,18 @@ function App() {
                         </NavbarBrand>
                         <br/>
                         <Navbar className="menuItem">
-                            <NavLink onClick={ () => setPage(<Welcome/>)}>
+                            <NavLink onClick={ () => resetPage(Path.welcome)}
+                                     active={isActive(Path.welcome)}>
                                 <NavItemLeft eventKey="Home">
                                     <div className='navMenuIcon'>
                                         <span> JAYLERS INFINITE </span>
                                     </div>
                                 </NavItemLeft>
                             </NavLink>
-
                         </Navbar>
 
-                        <NavLink onClick={ () => setPage(<Home/>)}>
+                        <NavLink onClick={ () => resetPage(Path.home)}
+                                 active={isActive(Path.home)}>
                             <Navbar className="menuItem">
                                 <NavItemLeft eventKey="Home">
                                     <img className="navImgItem" src={Code} alt={"Home"}/> Home
@@ -139,7 +147,8 @@ function App() {
                             </Navbar>
                         </NavLink>
 
-                        <NavLink onClick={ () => setPage(<TimeLine/>)}>
+                        <NavLink onClick={ () => resetPage(Path.timeline)}
+                                 active={isActive(Path.timeline)}>
                             <Navbar className="menuItem">
                                 <NavItemLeft eventKey="Timeline">
                                     <img className="navImgItem" src={timeline} alt={"Timeline"}/> Timeline
@@ -147,7 +156,8 @@ function App() {
                             </Navbar>
                         </NavLink>
 
-                        <NavLink onClick={ () => setPage(<Experience/>)}>
+                        <NavLink onClick={ () => resetPage(Path.experience)}
+                                 active={isActive(Path.experience)}>
                             <Navbar className="menuItem">
                                 <NavItemLeft eventKey="Experience">
                                     <img className="navImgItem" src={coding} alt={"Experience"}/> Experience
@@ -155,7 +165,8 @@ function App() {
                             </Navbar>
                         </NavLink>
 
-                        <NavLink onClick={ () => setPage(<Hobby/>)}>
+                        <NavLink onClick={ () => resetPage(Path.hobby)}
+                                 active={isActive(Path.hobby)}>
                             <Navbar className="menuItem">
                                 <NavItemLeft eventKey="Hobby">
                                     <img className="navImgItem" src={hobby} alt={"Hobby"} /> Hobby
@@ -163,7 +174,8 @@ function App() {
                             </Navbar>
                         </NavLink>
 
-                        <NavLink onClick={ () => setPage(<AboutMe/>)}>
+                        <NavLink onClick={ () => resetPage(Path.about)}
+                                 active={isActive(Path.about)}>
                             <Navbar className="menuItem">
                                 <NavItemLeft eventKey="About me">
                                     <img className="navImgItem" src={geek} alt={"About me"}/> About me
@@ -172,7 +184,7 @@ function App() {
                         </NavLink>
                     </NavLeft>
                     <div className="copyRight">
-                        <CopyRight/>
+                        {CopyRight()}
                     </div>
                 </div>
                 <div className="content">
