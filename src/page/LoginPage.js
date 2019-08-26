@@ -23,7 +23,7 @@ export default function LoginPage() {
     function checkAuth(){
         if (username && password){
             cookies.set(Application.APP_NAME, username, { path: '/' });
-        } else cookies.remove(Application.APP_NAME)
+        } else cookies.remove(Application.APP_NAME);
         return cookies.get(Application.APP_NAME);
     }
 
@@ -35,9 +35,15 @@ export default function LoginPage() {
 
     return (
         <div className="App container-fluid">
-            Username : <input id="username" type="text" onChange={ event => typingUsername(event.target.value)} /> <br/> <br/>
-            Password : <input id="password" type="password" onChange={ event => typingPassword(event.target.value)} onKeyPress={ event => handleKeyDown(event.key) }/> <br/>
-            <Button onClick={ () => new AttemptToLogin() }> Login </Button>
+            <form>
+                Username : <input id="username" type="text" autoComplete="username"
+                                  onChange={ event => typingUsername(event.target.value)} /> <br/> <br/>
+                Password : <input id="password" type="password" autoComplete="current-password"
+                                  onChange={ event => typingPassword(event.target.value)}
+                                  onKeyPress={ event => handleKeyDown(event.key) }/> <br/>
+                <Button onClick={ () => new AttemptToLogin() }> Login </Button>
+            </form>
+
         </div>
     );
 }

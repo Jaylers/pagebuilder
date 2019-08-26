@@ -113,7 +113,7 @@ function App() {
 
                             <Navbar>
                                 <NavItem className="copyRightTop">
-                                    {CopyRight}
+                                    {CopyRight()}
                                 </NavItem>
                             </Navbar>
                         </Nav>
