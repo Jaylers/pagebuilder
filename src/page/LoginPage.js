@@ -64,12 +64,11 @@ export default function LoginPage() {
                                   onChange={ event => typingPassword(event.target.value)}
                                   onKeyPress={ event => handleKeyDown(event.key) }/> <br/>
                 <Button onClick={ () => new AttemptToLogin() } className="login-btn">
-                    Login
+                    Sign in
                 </Button>
                 <br/>
-                <a href="/forgot" className="login-href">Forgot Username/ Password?</a>
-                <br/>
-                <a href="/create" className="login-create">Create new account</a>
+
+                <a href="/create" className="login-href">Sign up</a> | <a href="/forgot" className="login-href">Forget?</a>
             </form>
 
         </div>
