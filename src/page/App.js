@@ -7,26 +7,31 @@ import timeline from "../asset/timeline.png";
 import coding from "../asset/coding.png";
 import hobby from "../asset/hobby.png";
 import geek from "../asset/geek.png";
+import logout from "../asset/logout.png";
 
 import {Nav as NavLeft, NavItem as NavItemLeft} from "@trendmicro/react-sidenav";
 import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink} from 'reactstrap';
-import {Path} from "../utils/Constant";
+import {Application, Path} from "../utils/Constant";
 import WelcomeFragment from "../fragment/WelcomeFragment";
 import HomeFragment from "../fragment/HomeFragment";
 import TimeLineFragment from "../fragment/TimeLineFragment";
 import ExperienceFragment from "../fragment/ExperienceFragment";
 import HobbyFragment from "../fragment/HobbyFragment";
 import AboutFragment from "../fragment/AboutFragment";
-import LoginPage from "./LoginPage";
 import CopyRight from "../fragment/control/CopyRight";
+import Cookies from "universal-cookie";
 
 function App() {
+    const cookies = new Cookies();
     const [page, setPage] = useState(WelcomeFragment());
     const [current, setCurrent] = useState(Path.welcome);
     const [isOpen, setToggle] = useState(false);
+    let user = cookies.get(Application.USER);
+    if (!user){
+        user = { "username" : "Sign in"}
+    }
 
     function resetPage(selectedPath) {
-        console.log(selectedPath);
         setCurrent(selectedPath);
         if (selectedPath.includes(Path.home)){
             setPage(HomeFragment);
@@ -39,7 +44,8 @@ function App() {
         }else if (selectedPath.includes(Path.about)){
             setPage(AboutFragment);
         }else if (selectedPath.includes(Path.login)){
-            setPage(LoginPage);
+            cookies.remove(Application.USER);
+            window.location.href = "/";
         }else {
             setPage(WelcomeFragment);
         }
@@ -103,15 +109,16 @@ function App() {
                                 </Navbar>
                             </NavLink>
 
-                            <NavLink href="/login">
+                            <NavLink onClick={ () => resetPage(Path.login)}>
                                 <Navbar className="headerBarItem">
-                                    <NavItem>
-                                        Login
+                                    <NavItem className="headerBarUser">
+                                        {user.username}
+                                        <img src={logout} className="headBarImgItem" alt={"app logo"}/>
                                     </NavItem>
                                 </Navbar>
                             </NavLink>
 
-                            <Navbar>
+                            <Navbar className="copyRightTop">
                                 <NavItem className="copyRightTop">
                                     {CopyRight()}
                                 </NavItem>

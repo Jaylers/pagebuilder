@@ -9,17 +9,15 @@ import Code from "../asset/history.png";
 
 export default function LoginPage() {
     const cookies = new Cookies();
-    cookies.remove(Application.APP_NAME);
-
     const [username, typingUsername] = useState("");
     const [password, typingPassword] = useState("");
+    verifyLogin();
 
     function  verifyLogin() {
-        if (cookies.get(Application.APP_NAME)){
+        if (cookies.get(Application.USER)){
             window.location.href = "/";
         } else {
-            console.log("Cookies name false : " + cookies.get(Application.APP_NAME));
-            cookies.remove(Application.APP_NAME);
+            cookies.remove(Application.USER);
         }
     }
 
@@ -32,11 +30,11 @@ export default function LoginPage() {
             Axios.get(ServiceApi.news)
                 .then(function (response) {
                     console.log(response);
-                    cookies.set(Application.APP_NAME, username, { path: '/' });
+                    cookies.set(Application.USER, {"username" : username}, { path: '/', expires: new Date(Date.now()+2592000)});
                     verifyLogin();
                 })
                 .catch(function (error) {
-                    cookies.remove(Application.APP_NAME);
+                    cookies.remove(Application.USER);
                     displayError("Exception", error);
                 });
         } else {

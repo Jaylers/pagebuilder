@@ -45,6 +45,23 @@
   padding: 10px;
 }
 
+.headBarImgItem {
+  margin-left: 8px;
+  width: 25px;
+  height: 25px;
+  padding: 2px;
+}
+
+.headerBarUser {
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #282c34;
+}
+
+.headerBarUser:hover {
+  color: gray;
+}
+
 .App-header {
   background-color: white;
   min-height: 100vh;

@@ -52,9 +52,17 @@
     pointer-events: none;
 }
 
+.img-brand {
+    width: 400px;
+    margin-bottom: 30px;
+    pointer-events: none;
+}
+
 .login-input {
     width: 300px;
-    padding: 8px;
+    height: 42px;
+    padding: 4px;
+    font-size: 20px;
     border-radius: 20px;
     color: black;
     text-align: center;
@@ -102,4 +110,26 @@
     text-shadow: 4px 4px 6px black;
     color: white;
     text-decoration: none;
+}
+
+.text-notfound{
+    font-weight: bold;
+    font-size: large;
+}
+
+.text-notfound-detail{
+    font-weight: normal;
+    font-size: medium;
+}
+
+.notfound-href {
+    background-color: transparent;
+    border: 2px solid gray;
+    width: 150px;
+    margin-top: 50px;
+    color: black;
+}
+
+.notfound-href:hover {
+    color: white;
 }

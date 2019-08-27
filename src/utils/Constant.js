@@ -1,4 +1,5 @@
 export const Application = {
+    USER : "USER-SESSION",
     APP_NAME : "JAYLERS-INFINITE",
     APP_KEY : "2J5A1Y1L1E9R9S4-2I5N1F1I2N5I3T7E",
 };
