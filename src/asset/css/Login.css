@@ -26,16 +26,16 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: #2c9dff;
-    background: -webkit-linear-gradient(bottom, #005bea, #00c6fb);
-    background: -o-linear-gradient(bottom, #005bea, #00c6fb);
-    background: -moz-linear-gradient(bottom, #005bea, #00c6fb);
-    background: linear-gradient(bottom, #005bea, #00c6fb);
-    opacity: 0.9;
+    background: dodgerblue;
+    background: -webkit-linear-gradient(to bottom, blue, deeppink);
+    background: -o-linear-gradient(to bottom, blue, deeppink);
+    background: -moz-linear-gradient(to bottom, blue, deeppink);
+    background: linear-gradient(to bottom, blue, deeppink);
+    opacity: 0.7;
 }
 
 .bg-url {
-    background-image: url("https://www.accruent.com/sites/default/files/styles/resource_image/public/resource-images/case-study-images/seattle-skyline-dusk-lighting-1000x550.jpg?itok=R6z9gM2v");
+    background-image: url("http://www.jaylers.com/public/unsplash.jpg");
 }
 
 .login-form {
@@ -68,17 +68,14 @@
     padding: 8px;
     border-radius: 20px;
     background-color: #333;
+    border: 1px solid #333333;
 }
 
 .login-btn:hover {
-    text-shadow: 0px 0px 10px whitesmoke;
+    font-weight: bolder;
+    background-color: #333;
+    border: 1px solid gray;
 }
-
-.login-btn:hover {
-    color: dodgerblue;
-    text-shadow: 0px 0px 10px pink;
-}
-
 
 .login-href {
     margin-top: 40px;
