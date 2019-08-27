@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Prompt|Roboto&display=swap');
 
 .App {
   text-align: center;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto', 'Prompt', monospace;
 }
 
 .App-logo {
@@ -165,4 +165,8 @@
   bottom: 5px;
   color: gray;
   font-size: 10px;
+}
+
+.padding10 {
+  padding: 10px;
 }
