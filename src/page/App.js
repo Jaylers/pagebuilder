@@ -45,7 +45,7 @@ function App() {
             setPage(AboutFragment);
         }else if (selectedPath.includes(Path.login)){
             cookies.remove(Application.USER);
-            window.location.href = "/";
+            window.location.href = Path.login;
         }else {
             setPage(WelcomeFragment);
         }

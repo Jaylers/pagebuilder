@@ -5,13 +5,17 @@ export const Application = {
 };
 
 export const Path = {
+    index : "/",
     welcome : "welcome",
     home : "home",
     timeline : "timeline",
     experience : "experience",
     hobby : "hobby",
     about : "about",
-    login : "login"
+    login : "login",
+    register : "register",
+    forget : "forget",
+    reset : "reset",
 };
 
 export const Result = {

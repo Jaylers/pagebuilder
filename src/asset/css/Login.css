@@ -38,6 +38,14 @@
     background-image: url("http://www.jaylers.com/public/unsplash.jpg");
 }
 
+.whitText {
+    color: white;
+}
+
+.boldText {
+    font-weight: bold;
+}
+
 .login-form {
     margin: 20vh auto auto;
     width: max-content;
@@ -62,11 +70,13 @@
     width: 300px;
     height: 42px;
     padding: 4px;
-    font-size: 20px;
+    margin: 10px;
+    font-size: 18px;
     border-radius: 20px;
     color: black;
     text-align: center;
     border: 1px solid silver;
+    alignment: center;
 }
 
 .login-btn {
@@ -88,12 +98,40 @@
 .login-href {
     margin-top: 40px;
     color: whitesmoke;
+    font-weight: bold;
+}
+
+.login-back-home {
+    background-color: transparent;
+    border: 2px solid white;
+    opacity: 0.8;
+    color: black;
+    font-weight: bold;
+    width: 150px;
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 25px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 18px;
+}
+.login-back-home:hover {
+    background-color: white;
+    border: 2px solid white;
+    color: black;
+    text-decoration: none;
 }
 
 .login-href:hover {
     text-shadow: 4px 4px 6px black;
     color: white;
     text-decoration: none;
+}
+.dis { }
+.login-href .dis :hover {
+    color: white;
+    cursor: none;
 }
 
 .login-create {
@@ -115,6 +153,20 @@
 .text-notfound{
     font-weight: bold;
     font-size: large;
+}
+
+.text-forget{
+    font-weight: bold;
+    font-size: x-large;
+    margin: 4px;
+}
+
+.div-forget {
+    background-color: white;
+    opacity: 0.7;
+    border-radius: 10px;
+    color: #282c34;
+    padding: 8px 16px 16px;
 }
 
 .text-notfound-detail{
