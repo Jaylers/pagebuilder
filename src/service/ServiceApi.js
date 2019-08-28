@@ -1,4 +1,5 @@
-const BASE_API = "http://128.199.149.14:8081";
+const BASE_API = "http://192.168.20.150:9000";
 export const ServiceApi = {
-    news : BASE_API + "/news/announcement",
+    users : BASE_API + "/api/users",
+    login : BASE_API + "/api/user/login",
 };

@@ -5,7 +5,7 @@ import Cookies from 'universal-cookie';
 import {Application, Path} from "../utils/Constant";
 import {ServiceApi} from "../service/ServiceApi";
 import Axios from "axios"
-import Code from "../asset/history.png";
+import Code from "../asset/logo.svg";
 import * as Validator from "../service/Validator";
 
 export default function LoginPage() {
@@ -28,11 +28,19 @@ export default function LoginPage() {
         } else if (!password){
             displayError("Required", "Password is required!");
         } else if (username && password){
-            Axios.get(ServiceApi.news)
+
+            const request = {
+                "username": username.toUpperCase(),
+                "password" : password
+            };
+
+            Axios.post(ServiceApi.login, request )
                 .then(function (response) {
-                    console.log(response);
-                    cookies.set(Application.USER, {"username" : username}, { path: '/', expires: new Date(Date.now()+2592000)});
-                    verifyLogin();
+                    let data = response.data;
+                    if (data.code === 200){
+                        cookies.set(Application.USER, {"username" : username.toUpperCase()}, { path: '/', expires: new Date(Date.now()+2592000)});
+                        verifyLogin();
+                    }
                 })
                 .catch(function (error) {
                     cookies.remove(Application.USER);
