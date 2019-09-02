@@ -35,14 +35,14 @@ export default function LoginPage() {
             };
 
             let config = {
-                headers : { "Content-Type" : "text/plain" }
+                headers : { "Content-Type" : "application/json" }
             };
 
             Axios.post(ServiceApi.POST_LOGIN, request, config)
                 .then(function (response) {
                     let data = response.data;
                     if (data.status === "success"){
-                        const user = data.data[0];
+                        const user = data.data;
                         cookies.set(Application.USER, user, { path: '/', expires: new Date(Date.now()+2592000)});
                         cookies.set(Application.LAST_USER, {"username" : username}, { path: '/'});
                         verifyLogin();
