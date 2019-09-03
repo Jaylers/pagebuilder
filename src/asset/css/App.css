@@ -46,7 +46,7 @@
   width: 240px;
   height: 100%;
   position: fixed;
-  left: 0;
+  right: 0;
   color: white;
   background: #282c34;
 }
@@ -102,13 +102,13 @@
     width: 240px;
     height: 100%;
     position: fixed;
-    left: 0;
+    right: 0;
     color: white;
     background: #282c34;
   }
 
   .content {
-    margin-left: 240px;
+    margin-right: 240px;
   }
 
   .navColor {
@@ -122,7 +122,7 @@
 
 .mainBar {
   top: 56px;
-  margin-top: 56px;
+  margin-top: 76px;
   left: 0;
   right: 0;
 }
@@ -169,4 +169,27 @@
 
 .padding10 {
   padding: 10px;
+}
+
+/*button*/
+.btn-script {
+  border-radius: 2px;
+  border: 1px solid black;
+  color: black;
+  background: transparent;
+}
+
+.btn-page {
+  border-radius: 2px;
+  border: 1px solid black;
+  color: black;
+  background: silver;
+}
+
+.btn-logout {
+  border-radius: 25px;
+  width: 45px;
+  height: 45px;
+  background: white;
+  color: black;
 }

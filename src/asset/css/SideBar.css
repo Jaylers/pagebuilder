@@ -52,6 +52,18 @@
   padding: 2px;
 }
 
+.ImgItemIcon {
+    width: 25px;
+    height: 25px;
+    padding: 2px;
+    fill: red;
+}
+
+.ImgItemIcon path {
+    fill: red;
+    background-color: green;
+}
+
 .headerBarUser {
   text-transform: uppercase;
   font-weight: normal;

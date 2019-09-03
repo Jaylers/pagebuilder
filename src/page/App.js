@@ -7,7 +7,8 @@ import timeline from "../asset/timeline.png";
 import coding from "../asset/coding.png";
 import hobby from "../asset/hobby.png";
 import geek from "../asset/geek.png";
-import logout from "../asset/logout.png";
+import logout from "../asset/svg/logout.svg";
+import login from "../asset/svg/login.svg";
 
 import {Nav as NavLeft, NavItem as NavItemLeft} from "@trendmicro/react-sidenav";
 import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink} from 'reactstrap';
@@ -20,6 +21,7 @@ import HobbyFragment from "../fragment/HobbyFragment";
 import AboutFragment from "../fragment/AboutFragment";
 import CopyRight from "../fragment/control/CopyRight";
 import Cookies from "universal-cookie";
+import Button from "reactstrap/es/Button";
 
 function App() {
     const cookies = new Cookies();
@@ -27,8 +29,12 @@ function App() {
     const [current, setCurrent] = useState(Path.welcome);
     const [isOpen, setToggle] = useState(false);
     let user = cookies.get(Application.USER);
+    let UserState = login;
     if (!user){
-        user = { "username" : "Sign in"}
+        user = { "username" : ""};
+        UserState = login;
+    } else {
+        user = logout
     }
 
     function resetPage(selectedPath) {
@@ -57,66 +63,36 @@ function App() {
         <div className="App">
             <div className="topBar">
                 <Navbar color="light" light expand="md">
-                    <NavbarBrand href="/">JAYLERS INFINITE</NavbarBrand>
+                    <NavbarBrand href="/">TC PageBuilder</NavbarBrand>
                     <NavbarToggler onClick={() => setToggle(!isOpen)} />
                     <Collapse isOpen={isOpen} navbar>
-
                         <Nav className="ml-auto" navbar>
                             <br/>
-                            <NavLink className="headerBarItemActive"
-                                     onClick={ () => resetPage(Path.home)}
-                                     active={isActive(Path.home)}>
-                                <Navbar className="headerBarItem">
-                                    <NavItem>
-                                        Home
-                                    </NavItem>
-                                </Navbar>
-                            </NavLink>
+                            <Navbar className="headerBarItem">
+                                <NavItem>
+                                    <Button className="btn-script">Script</Button>
+                                </NavItem>
+                            </Navbar>
 
-                            <NavLink onClick={ () => resetPage(Path.timeline)}
-                                     active={isActive(Path.timeline)}>
-                                <Navbar className="headerBarItem">
-                                    <NavItem>
-                                        Timeline
-                                    </NavItem>
-                                </Navbar>
-                            </NavLink>
+                            <Navbar className="headerBarItem">
+                                <NavItem>
+                                    <Button className="btn-page">Page</Button>
+                                </NavItem>
+                            </Navbar>
 
-                            <NavLink onClick={ () => resetPage(Path.experience)}
-                                     active={isActive(Path.experience)}>
-                                <Navbar className="headerBarItem">
-                                    <NavItem>
-                                        Experience
-                                    </NavItem>
-                                </Navbar>
-                            </NavLink>
+                            <Navbar className="headerBarItem">
+                                <NavItem>
+                                    {user.username}
+                                </NavItem>
+                            </Navbar>
 
-                            <NavLink onClick={ () => resetPage(Path.hobby)}
-                                     active={isActive(Path.hobby)}>
-                                <Navbar className="headerBarItem">
-                                    <NavItem>
-                                        Hobby
-                                    </NavItem>
-                                </Navbar>
-                            </NavLink>
-
-                            <NavLink onClick={ () => resetPage(Path.about)}
-                                     active={isActive(Path.about)}>
-                                <Navbar className="headerBarItem">
-                                    <NavItem>
-                                        About me
-                                    </NavItem>
-                                </Navbar>
-                            </NavLink>
-
-                            <NavLink onClick={ () => resetPage(Path.login)}>
-                                <Navbar className="headerBarItem">
-                                    <NavItem className="headerBarUser">
-                                        {user.username}
-                                        <img src={logout} className="headBarImgItem" alt={"app logo"}/>
-                                    </NavItem>
-                                </Navbar>
-                            </NavLink>
+                            <Navbar className="headerBarItem">
+                                <NavItem className="headerBarUser">
+                                    <Button className="btn-logout">
+                                        <img src={UserState} className="svg-inline--fa ImgItemIcon" alt={"app logo"}/>
+                                    </Button>
+                                </NavItem>
+                            </Navbar>
 
                             <Navbar className="copyRightTop">
                                 <NavItem className="copyRightTop">
