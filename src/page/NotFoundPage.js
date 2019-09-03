@@ -10,7 +10,7 @@ export default function NotFoundPage() {
     return (
         <div className="App">
             <div className="login-form">
-                <img src={Logo} className="img-brand"/> <br/>
+                <img src={Logo} className="img-brand" alt={"logo"}/> <br/>
                 <p className="text-notfound">It's look like the request url is not exist</p>
                 <p className="text-notfound-detail">{url}</p>
                 <Button href="/login" className="btn-primary notfound-href">

@@ -4,7 +4,6 @@ import Button from "reactstrap/es/Button";
 import Cookies from 'universal-cookie';
 import {Application, Path} from "../utils/Constant";
 import Code from "../asset/history.png";
-import * as Validator from "../service/Validator";
 
 export default function RegisterPage() {
     const cookies = new Cookies();
@@ -17,6 +16,7 @@ export default function RegisterPage() {
     verifyLogin();
 
     function  verifyLogin() {
+        console.log("Data : " + firstName + " <> " + lastName + " <> " + email + " <> " + username + " <> " + password + " <> " + rePassword);
         if (cookies.get(Application.USER)){
             window.location.href = "/";
         } else {
@@ -25,7 +25,7 @@ export default function RegisterPage() {
     }
 
     function AttemptToRegister(){
-
+        displayError("No implemented", "please, Implement this register")
     }
 
     function displayError(title, message) {
