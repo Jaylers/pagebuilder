@@ -7,17 +7,19 @@ import Input from "reactstrap/es/Input";
 import {Dropdown, DropdownItem, DropdownMenu, DropdownToggle} from "reactstrap";
 import Button from "reactstrap/es/Button";
 
-export default function SideBar() {
+export default function SideBar(setHide:(set:boolean) => void, currentSideBar) {
 
     const [isNameSpaceOpen, setNamSpaceOpen] = useState(false);
-    const [isSiteOpen, setSiteOpen] = useState(true);
-    const [isDisplay, setDisplay] = useState(true);
+    const [isSiteOpen, setSiteOpen] = useState(false);
+    function setIsDisplay(status) {
+        setHide(status)
+    }
 
     return (
-        <div>
-            <div className="row btn-page bgGray">
-                <div className="col-4">
-                    <Button onClick={() => setDisplay(!isDisplay)}>
+        <div className="padgin0">
+            <div className="row btn-page bgGray padgin0">
+                <div className="col-4 padgin0">
+                    <Button onClick={() => setIsDisplay(false)}>
                         <img src={next}  alt={"close or open bar"} className="ImgItemMid margin10 padding8"/>
                     </Button>
                 </div>

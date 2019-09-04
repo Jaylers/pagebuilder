@@ -65,13 +65,17 @@ body {
   background-color: white;
   width: max-content;
   min-width: max-content;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 .content {
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
-  padding: 2px;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: red;
 }
 
 .headerBarItem {
@@ -97,31 +101,6 @@ body {
   .App {
     display: none;
   }
-
-  /*.menuBar {*/
-  /*  display: none;*/
-  /*}*/
-
-  /*.headerBarItem {*/
-  /*  background-color: white;*/
-  /*  height: 55px;*/
-  /*  border: #f8f9fa solid 2px;*/
-  /*  border-radius: 5px;*/
-  /*  color: #282c34;*/
-  /*}*/
-
-  /*.headerBarItem:active {*/
-  /*  background-color: #282c34;*/
-  /*  color: white;*/
-  /*}*/
-
-  /*.copyRightTop {*/
-  /*  width: 100%;*/
-  /*  color: gray;*/
-  /*  font-size: 10px;*/
-  /*  padding-top: 10px;*/
-  /*  text-align: center;*/
-  /*}*/
 }
 
 /*desktop screen*/
@@ -262,7 +241,7 @@ body {
 }
 
 .input-windows {
-  width: 100%;
+  width: 90%;
   text-align: left;
   border-radius: 1px;
   border: 1px solid #282c34;
@@ -271,10 +250,21 @@ body {
 }
 
 .btn-windows {
-  width: 75%;
+  width: 65%;
   text-align: center;
   border-radius: 8px;
   border: 1px solid #282c34;
   background-color: whitesmoke;
   color: #282c34;
+}
+
+.btnSideBarControl {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 25px;
+  border: 1px solid dodgerblue;
+  background-color: dodgerblue;
 }

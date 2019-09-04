@@ -5,8 +5,9 @@
     width: 50%;}
 .txt-right { text-align: right; }
 
-.displayNone { visibility: collapse }
-.displayNow { visibility: visible }
+.displayNone { display: none }
+.displayNow { display: block }
+.padgin0 { padding: 0; margin: 0}
 
 .margin0 { margin: 0; }
 .margin2 { margin: 2px; }
