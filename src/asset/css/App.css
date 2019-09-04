@@ -232,11 +232,11 @@ body {
 }
 
 .txt-header {
+  width: 100px;
   cursor: pointer;
   font-weight: bold;
   text-transform: uppercase;
   height: 100%;
-  width: max-content;
 }
 
 /*button*/
@@ -247,7 +247,7 @@ body {
   min-width: 100px;
   margin-left: 10px;
   margin-right: 10px;
-  border-radius: 1px;
+  border-radius: 2px;
   border: 1px solid black;
   cursor: pointer;
 }
@@ -263,7 +263,7 @@ body {
 }
 
 .marginRight50 {
-  margin-right: 160px;
+  margin-right: 120px;
 }
 
 .btn-logout {

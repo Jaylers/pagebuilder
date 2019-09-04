@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import '../asset/css/Login.css';
 import Button from "reactstrap/es/Button";
 import Cookies from 'universal-cookie';
-import {Application, Path} from "../utils/Constant";
+import {Application, Action} from "../utils/Constant";
 import Logo from "../asset/logo.svg";
 
 export default function LoginPage() {
@@ -19,7 +19,7 @@ export default function LoginPage() {
     }
 
     function tryToSendEmailReset() {
-
+        console.log(email)
     }
 
     function handleKeyDown(key) {
@@ -49,7 +49,7 @@ export default function LoginPage() {
                     </Button>
                     <br/>
 
-                    <a href={Path.register} className="login-href">Sign up</a> | <a href={Path.login} className="login-href">Sign in</a>
+                    <a href={Action.register} className="login-href">Sign up</a> | <a href={Action.login} className="login-href">Sign in</a>
                 </form>
 
             </div>

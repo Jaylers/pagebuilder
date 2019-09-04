@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import '../asset/css/Login.css';
 import Button from "reactstrap/es/Button";
 import Cookies from 'universal-cookie';
-import {Application, Path} from "../utils/Constant";
+import {Application, Action} from "../utils/Constant";
 import {ServiceApi} from "../service/ServiceApi";
 import Axios from "axios"
 import Code from "../asset/logo.svg";
@@ -69,7 +69,7 @@ export default function LoginPage() {
 
     return (
         <div className="App login-container bg-url">
-            <a href={Path.index} className="login-back-home">home</a>
+            <a href={Action.index} className="login-back-home">home</a>
             <form className="login-form">
                 <img src={Code} className="login-brand" alt={"logo"}/> <br/>
                 <input id="username" type="text" autoComplete="username" className="login-input"
@@ -85,8 +85,8 @@ export default function LoginPage() {
                 </Button>
                 <br/>
 
-                <a href={Path.register} className="login-href">Sign up</a> | <a href={Path.forget}
-                                                                                className="login-href">Forget?</a>
+                <a href={Action.register} className="login-href">Sign up</a> | <a href={Action.forget}
+                                                                                  className="login-href">Forget?</a>
             </form>
 
         </div>

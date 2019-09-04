@@ -14,6 +14,7 @@ import Cookies from "universal-cookie";
 import {Application, Action} from "../../utils/Constant";
 import login from "../../asset/svg/login.svg";
 import logout from "../../asset/svg/logout.svg";
+import Tradition from "../../asset/Tradition.ico";
 import Button from "reactstrap/es/Button";
 
 export default function TopBar(resetPage: (path: String) => void ) {
@@ -26,7 +27,7 @@ export default function TopBar(resetPage: (path: String) => void ) {
     return (
         <div className="topBarRelative">
             <Navbar color="light" light expand="md">
-                <NavbarBrand href="/">TC PageBuilder</NavbarBrand>
+                <NavbarBrand href="/"> <img src={Tradition} alt={"app logo"} className="ImgItemLogo"/> TC PageBuilder</NavbarBrand>
                 <NavbarToggler onClick={() => setToggle(!isOpen)} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="ml-auto" navbar>
@@ -54,11 +55,12 @@ export default function TopBar(resetPage: (path: String) => void ) {
 
                         <NavItem className="txt-header-group">
                             <NavLink className="txt-header"
-                                onClick={() => resetPage(Action.script)}>{user.username}</NavLink>
+                                onClick={() => resetPage(Action.login)}>{user.username}</NavLink>
                         </NavItem>
 
                         <NavItem className="headerBarUser">
-                            <Button className="btn-logout padding4">
+                            <Button className="btn-logout padding4"
+                                    onClick={() => resetPage(Action.login)}>
                                 <img src={UserState} className="svg-inline--fa ImgItemIcon" alt={"app logo"}/>
                             </Button>
                         </NavItem>

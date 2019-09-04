@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import '../asset/css/Login.css';
 import Button from "reactstrap/es/Button";
 import Cookies from 'universal-cookie';
-import {Application, Path} from "../utils/Constant";
+import {Application, Action} from "../utils/Constant";
 import Code from "../asset/history.png";
 
 export default function RegisterPage() {
@@ -73,7 +73,7 @@ export default function RegisterPage() {
                 </Button>
                 <br/>
 
-               Already have an account? | <a href={Path.login} className="login-href boldText">Sign in</a>
+               Already have an account? | <a href={Action.login} className="login-href boldText">Sign in</a>
             </form>
 
         </div>

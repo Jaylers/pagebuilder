@@ -59,6 +59,11 @@
     fill: red;
 }
 
+.ImgItemLogo {
+  width: 30px;
+  height: 30px;
+}
+
 .ImgItemMid {
   width: 50px;
   height: 50px;

@@ -5,7 +5,7 @@ export const Application = {
     APP_KEY : "2J5A1Y1L1E9R9S4-2I5N1F1I2N5I3T7E",
 };
 
-export const Path = {
+export const Action = {
     index : "/",
     welcome : "welcome",
     home : "home",
@@ -17,6 +17,9 @@ export const Path = {
     register : "register",
     forget : "forget",
     reset : "reset",
+    script : "script",
+    new : "new",
+    list : "list",
 };
 
 export const Result = {
