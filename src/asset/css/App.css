@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Prompt|Roboto&display=swap');
 
+body {
+  overflow-x: hidden;
+}
+
 .App {
   text-align: center;
   font-family: 'Roboto', 'Prompt', monospace;
+  overflow-x: hidden;
+  left: 0;
+  right: 0;
 }
 
 .App-logo {
@@ -33,31 +40,51 @@
   color: white;
 }
 
+.topBarRelative {
+  position: relative;
+}
+
+.topItem {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
 .topBar {
-  position: fixed;
-  width: 100%;
   top: 0;
-  margin-bottom: 0;
-  border: none;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
   border-bottom: 5px solid #171a1c;
+  position: fixed;
+  z-index: 1;
+  background: #282c34;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.topBar-drop {
+  position: absolute;
 }
 
 .menuBar {
-  width: 240px;
   height: 100%;
+  width: 16%;
+  min-height: 94vh;
   position: fixed;
   right: 0;
-  color: white;
-  background: #282c34;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background: white;
+  color: #282c34;
+  border-left: 2px #282c34 solid;
 }
 
 .content {
-  display: block;
-  padding: 2px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  word-wrap: break-word;
   height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  padding: 2px;
 }
 
 .headerBarItem {
@@ -70,49 +97,50 @@
 
 /*mobile screen*/
 @media (max-width: 767px){
-  .menuBar {
+  .mobile{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0 -50% 0 0;
+    transform: translate(-50%, -50%);
+    color: red;
+    text-align: center;
+  }
+
+  .App {
     display: none;
   }
 
-  .headerBarItem {
-    background-color: white;
-    height: 55px;
-    border: #f8f9fa solid 2px;
-    border-radius: 5px;
-    color: #282c34;
-  }
+  /*.menuBar {*/
+  /*  display: none;*/
+  /*}*/
 
-  .headerBarItem:active {
-    background-color: #282c34;
-    color: white;
-  }
+  /*.headerBarItem {*/
+  /*  background-color: white;*/
+  /*  height: 55px;*/
+  /*  border: #f8f9fa solid 2px;*/
+  /*  border-radius: 5px;*/
+  /*  color: #282c34;*/
+  /*}*/
 
-  .copyRightTop {
-    width: 100%;
-    color: gray;
-    font-size: 10px;
-    padding-top: 10px;
-    text-align: center;
-  }
+  /*.headerBarItem:active {*/
+  /*  background-color: #282c34;*/
+  /*  color: white;*/
+  /*}*/
+
+  /*.copyRightTop {*/
+  /*  width: 100%;*/
+  /*  color: gray;*/
+  /*  font-size: 10px;*/
+  /*  padding-top: 10px;*/
+  /*  text-align: center;*/
+  /*}*/
 }
 
 /*desktop screen*/
 @media (min-width: 768px){
-  .menuBar {
-    width: 240px;
-    height: 100%;
-    position: fixed;
-    right: 0;
-    color: white;
-    background: #282c34;
-  }
-
-  .content {
-    margin-right: 240px;
-  }
-
-  .navColor {
-    color: #282c34;
+  .mobile{
+    display: none;
   }
 
   .copyRightTop {
@@ -120,11 +148,40 @@
   }
 }
 
+.navColor {
+  color: #282c34;
+}
+
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+.right {
+  right: 0;
+  background-color: #282c34;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
 .mainBar {
-  top: 56px;
-  margin-top: 76px;
   left: 0;
   right: 0;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 56px;
 }
 
 .bottomBar {
@@ -161,35 +218,76 @@
 
 .copyRight {
   position: fixed;
-  width: 240px;
+  width: 15%;
   bottom: 5px;
   color: gray;
-  font-size: 10px;
+  font-size: 12px;
 }
 
-.padding10 {
+.txt-header-group {
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding: 10px;
 }
 
+.txt-header {
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 100%;
+  width: max-content;
+}
+
 /*button*/
-.btn-script {
-  border-radius: 2px;
+.btn-header {
+  width: 100px;
+  height: 40px;
+  padding: 8px;
+  min-width: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 1px;
   border: 1px solid black;
+  cursor: pointer;
+}
+
+.btn-script {
   color: black;
   background: transparent;
 }
 
 .btn-page {
-  border-radius: 2px;
-  border: 1px solid black;
   color: black;
   background: silver;
 }
 
+.marginRight50 {
+  margin-right: 160px;
+}
+
 .btn-logout {
   border-radius: 25px;
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   background: white;
   color: black;
+}
+
+.input-windows {
+  width: 100%;
+  text-align: left;
+  border-radius: 1px;
+  border: 1px solid #282c34;
+  background-color: whitesmoke;
+  color: #282c34;
+}
+
+.btn-windows {
+  width: 75%;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #282c34;
+  background-color: whitesmoke;
+  color: #282c34;
 }
