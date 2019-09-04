@@ -69,12 +69,12 @@ export default function LoginPage() {
 
     return (
         <div className="App login-container bg-url">
-            <a href={Action.index} className="login-back-home">home</a>
             <form className="login-form">
                 <img src={Code} className="login-brand" alt={"logo"}/> <br/>
                 <input id="username" type="text" autoComplete="username" className="login-input"
                        placeholder="Username" value={username}
                        onChange={event => typingUsername(event.target.value)}/> <br/> <br/>
+
                 <input id="password" type="password" autoComplete="current-password" className="login-input"
                        placeholder="Password" value={password}
                        onChange={event => typingPassword(event.target.value)}
@@ -85,10 +85,8 @@ export default function LoginPage() {
                 </Button>
                 <br/>
 
-                <a href={Action.register} className="login-href">Sign up</a> | <a href={Action.forget}
-                                                                                  className="login-href">Forget?</a>
+                <a href={Action.register} className="login-href">Sign up</a> | <a href={Action.forget} className="login-href">Forget?</a>
             </form>
-
         </div>
     );
 }

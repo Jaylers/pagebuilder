@@ -51,16 +51,8 @@ body {
 
 .topBar {
   top: 0;
-  left: 0;
-  right: 0;
-  padding: 0;
-  margin: 0;
-  border-bottom: 5px solid #171a1c;
-  position: fixed;
-  z-index: 1;
+  border-bottom: 3px solid #171a1c;
   background: #282c34;
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 .topBar-drop {
@@ -68,16 +60,11 @@ body {
 }
 
 .menuBar {
-  height: 100%;
-  width: 16%;
-  min-height: 94vh;
-  position: fixed;
-  right: 0;
-  overflow-y: hidden;
-  overflow-x: hidden;
-  background: white;
   color: #282c34;
   border-left: 2px #282c34 solid;
+  background-color: white;
+  width: max-content;
+  min-width: max-content;
 }
 
 .content {
@@ -178,10 +165,10 @@ body {
 .mainBar {
   left: 0;
   right: 0;
+  top: 0;
+  bottom: 0;
   padding: 0;
   margin: 0;
-  position: absolute;
-  top: 56px;
 }
 
 .bottomBar {
@@ -227,7 +214,7 @@ body {
 .txt-header-group {
   height: 40px;
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 0;
   padding: 10px;
 }
 

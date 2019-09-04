@@ -17,7 +17,7 @@ import logout from "../../asset/svg/logout.svg";
 import Tradition from "../../asset/Tradition.ico";
 import Button from "reactstrap/es/Button";
 
-export default function TopBar(resetPage: (path: String) => void ) {
+export default function TopBar() {
     const cookies = new Cookies();
     let user = cookies.get(Application.USER);
     let UserState = (!user)? login : logout;
@@ -25,7 +25,7 @@ export default function TopBar(resetPage: (path: String) => void ) {
     const [isOpen, setToggle] = useState(false);
 
     return (
-        <div className="topBarRelative">
+        <div className="topBar">
             <Navbar color="light" light expand="md">
                 <NavbarBrand href="/"> <img src={Tradition} alt={"app logo"} className="ImgItemLogo"/> TC PageBuilder</NavbarBrand>
                 <NavbarToggler onClick={() => setToggle(!isOpen)} />
@@ -50,17 +50,19 @@ export default function TopBar(resetPage: (path: String) => void ) {
                         </UncontrolledDropdown>
 
                         <NavItem className="btn-header btn-script marginRight50">
-                            <NavLink onClick={() => resetPage(Action.script)}>Script</NavLink>
+                            <NavLink>Script</NavLink>
                         </NavItem>
 
                         <NavItem className="txt-header-group">
-                            <NavLink className="txt-header"
-                                onClick={() => resetPage(Action.login)}>{user.username}</NavLink>
+                            <NavLink className="txt-header">{user.username}</NavLink>
                         </NavItem>
 
                         <NavItem className="headerBarUser">
                             <Button className="btn-logout padding4"
-                                    onClick={() => resetPage(Action.login)}>
+                                    onClick={() => {
+                                        cookies.remove(Application.USER);
+                                        window.location.href = Action.login;
+                                    }}>
                                 <img src={UserState} className="svg-inline--fa ImgItemIcon" alt={"app logo"}/>
                             </Button>
                         </NavItem>
