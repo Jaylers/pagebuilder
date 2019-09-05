@@ -1,0 +1,12 @@
+
+#header-select * {
+  height: 40px;
+  min-height: 40px;
+}
+
+.opt-head {
+  height: 80px !important;
+  min-height: 80px;
+  font-weight: bold !important;
+  color: #282c34 !important;
+}

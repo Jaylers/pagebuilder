@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import "./../../asset/css/TopBar.css"
 import {
     Collapse,
     DropdownItem,
@@ -39,12 +40,9 @@ export default function TopBar() {
                                 <DropdownItem>
                                     New
                                 </DropdownItem>
-                                <DropdownItem>
-                                    List
-                                </DropdownItem>
                                 <DropdownItem divider />
                                 <DropdownItem>
-                                    Reset
+                                    List
                                 </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>

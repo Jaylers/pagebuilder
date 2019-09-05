@@ -3,7 +3,6 @@ import '../asset/css/App.css';
 import '../asset/css/SideBar.css'
 import '../asset/css/Utils.css'
 import notSupport from "../asset/svg/warning.svg";
-import HomeFragment from "../fragment/HomeFragment";
 import TopBar from "../fragment/control/TopBar";
 import SideBar from "../fragment/control/SideBar";
 import Button from "reactstrap/es/Button";
