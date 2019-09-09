@@ -4,6 +4,8 @@
     margin: auto;
     width: 50%;}
 .txt-right { text-align: right; }
+.textDarkColor { color: #282c34}
+.textLightColor { color: white}
 
 .displayNone { display: none }
 .displayNow { display: block }

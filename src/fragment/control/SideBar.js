@@ -16,8 +16,11 @@ export default function SideBar(setHide:(set:boolean) => void) {
         setHide(status)
     }
 
+    const [selected, setSelected] = useState("Select");
+    const [selected2, setSelected2] = useState("Select");
+
     return (
-        <div className="padgin0">
+        <div className="padgin0 textDarkColor">
             <div className="row btn-page bgGray padgin0">
                 <div className="col-4 padgin0">
                     <Button onClick={() => setIsDisplay(false)}>
@@ -37,12 +40,12 @@ export default function SideBar(setHide:(set:boolean) => void) {
                 Name space :
                 <Dropdown isOpen={isNameSpaceOpen} toggle={() => setNamSpaceOpen(!isNameSpaceOpen)} >
                     <DropdownToggle caret className="input-windows">
-                        Select
+                        {selected}
                     </DropdownToggle>
                     <DropdownMenu>
-                        <DropdownItem>Foo Action</DropdownItem>
-                        <DropdownItem>Bar Action</DropdownItem>
-                        <DropdownItem>Quo Action</DropdownItem>
+                        <DropdownItem onClick={() => { setSelected("Foo Action")}}>Foo Action</DropdownItem>
+                        <DropdownItem onClick={() => { setSelected("Bar Action")}}>Bar Action</DropdownItem>
+                        <DropdownItem onClick={() => { setSelected("Quo Action")}}>Quo Action</DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
             </div>
@@ -50,12 +53,12 @@ export default function SideBar(setHide:(set:boolean) => void) {
                 Site :
                 <Dropdown isOpen={isSiteOpen} toggle={() => setSiteOpen(!isSiteOpen)} >
                     <DropdownToggle caret className="input-windows">
-                        Select
+                        {selected2}
                     </DropdownToggle>
                     <DropdownMenu>
-                        <DropdownItem>Foo Action</DropdownItem>
-                        <DropdownItem>Bar Action</DropdownItem>
-                        <DropdownItem>Quo Action</DropdownItem>
+                        <DropdownItem onClick={() => { setSelected2("Foo Action")}}>Foo Action</DropdownItem>
+                        <DropdownItem onClick={() => { setSelected2("Bar Action")}}>Bar Action</DropdownItem>
+                        <DropdownItem onClick={() => { setSelected2("Quo Action")}}>Quo Action</DropdownItem>
                     </DropdownMenu>
                 </Dropdown>
             </div>
