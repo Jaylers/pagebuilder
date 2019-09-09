@@ -35,7 +35,10 @@ export default function LoginPage() {
             };
 
             let config = {
-                headers : { "Content-Type" : "application/json" }
+                headers : {
+                    "Content-Type" : "application/json" ,
+                        "key" : "qwertyuiop"
+                }
             };
 
             Axios.post(ServiceApi.POST_LOGIN, request, config)
