@@ -13,13 +13,16 @@ function App() {
 
     const [isShow, setShow] = useState("col-2 menuBar");
     const [isHam, setHam] = useState("displayNone");
+    const [contentStyle, setContentStyle] = useState("content");
     function setDisplay(set){
         if (set){
             setShow("col-2 menuBar");
             setHam("displayNone");
+            setContentStyle("content")
         } else {
             setShow("displayNone");
             setHam("displayNow");
+            setContentStyle("contentFull")
         }
     }
 
@@ -38,13 +41,15 @@ function App() {
                     <div className="col-12 mainBar">
                         <div className="row">
                             <div className="col padgin0">
-                                <div className="content">
-                                    {WelcomeFragment()}
+                                <div className={contentStyle}>
+                                    <div className="contentInside">
+                                        {WelcomeFragment()}
+                                    </div>
                                 </div>
                             </div>
 
                             <div className={isShow}>
-                                {SideBar(setDisplay, (isShow === "col-2 menuBar"))}
+                                {SideBar(setDisplay)}
                             </div>
                             <div className={isHam}>
                                 <Button className="btnSideBarControl"

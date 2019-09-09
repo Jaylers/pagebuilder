@@ -2,12 +2,13 @@ import React, {useState} from 'react';
 import CopyRight from "./CopyRight";
 import next from "../../asset/svg/double-chevron.svg"
 import '../../asset/css/App.css';
+import '../../asset/css/SideBar.css';
 import '../../asset/css/Utils.css';
 import Input from "reactstrap/es/Input";
 import {Dropdown, DropdownItem, DropdownMenu, DropdownToggle} from "reactstrap";
 import Button from "reactstrap/es/Button";
 
-export default function SideBar(setHide:(set:boolean) => void, currentSideBar) {
+export default function SideBar(setHide:(set:boolean) => void) {
 
     const [isNameSpaceOpen, setNamSpaceOpen] = useState(false);
     const [isSiteOpen, setSiteOpen] = useState(false);

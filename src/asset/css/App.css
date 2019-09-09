@@ -8,6 +8,7 @@ body {
   text-align: center;
   font-family: 'Roboto', 'Prompt', monospace;
   overflow-x: hidden;
+  overflow-y: hidden;
   left: 0;
   right: 0;
 }
@@ -50,9 +51,14 @@ body {
 }
 
 .topBar {
+  position: fixed;
+  left: 0;
+  right: 0;
   top: 0;
+  height: 60px;
   border-bottom: 3px solid #171a1c;
   background: #282c34;
+  z-index: 2;
 }
 
 .topBar-drop {
@@ -60,21 +66,32 @@ body {
 }
 
 .menuBar {
-  color: #282c34;
+  color: white;
   border-left: 2px #282c34 solid;
   background-color: white;
-  width: max-content;
+  width: 300px;
   min-width: max-content;
   height: 100vh;
   margin: 0;
   padding: 0;
+  position: fixed;
+  right: 0;
+}
+
+.contentFull {
+  height: 100%;
+  width: 100%;
+  align-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .content {
   height: 100%;
   width: 100%;
-  padding-left: 25px;
-  padding-right: 25px;
+  align-content: center;
+  padding-left: 50px;
+  padding-right: 350px;
 }
 
 .headerBarItem {
@@ -143,7 +160,7 @@ body {
 .mainBar {
   left: 0;
   right: 0;
-  top: 0;
+  top: 60px;
   bottom: 0;
   padding: 0;
   margin: 0;
