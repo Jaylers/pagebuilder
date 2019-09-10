@@ -8,6 +8,7 @@ import SideBar from "../fragment/control/SideBar";
 import Button from "reactstrap/es/Button";
 import Hamburger from "../asset/svg/menu.svg"
 import WelcomeFragment from "../fragment/WelcomeFragment";
+import HomeFragment from "../fragment/HomeFragment";
 
 function App() {
 
@@ -43,7 +44,7 @@ function App() {
                             <div className="col padgin0">
                                 <div className={contentStyle}>
                                     <div className="contentInside">
-                                        {WelcomeFragment()}
+                                        {HomeFragment()}
                                     </div>
                                 </div>
                             </div>
