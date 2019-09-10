@@ -56,14 +56,8 @@ export default function HomeFragment() {
                 data={appGrid}
                 valueRenderer={(cell) => cell.value}
                 onContextMenu={(e, cell, i, j) => cell.readOnly ? e.preventDefault() : null}
-                onCellChanging = { changes => {
-                    const grid = bigGrid.map(row => [...row]);
-                    changes.forEach(({cell, row, col, value}) => {
-                        grid[row][col] = {...grid[row][col], value}
-                    });
-                }}
                 onCellsChanged={changes => {
-                    const grid = bigGrid.map(row => [...row]);
+                    const grid = appGrid.map(row => [...row]);
                     changes.forEach(({cell, row, col, value}) => {
                         grid[row][col] = {...grid[row][col], value}
                     });
