@@ -13,11 +13,10 @@ export default function NotFoundPage() {
                 <img src={Logo} className="img-brand" alt={"logo"}/> <br/>
                 <p className="text-notfound">It's look like the request url is not exist</p>
                 <p className="text-notfound-detail">{url}</p>
-                <Button href="/login" className="btn-primary notfound-href">
+                <Button href="/" className="btn-primary notfound-href">
                     Home
                 </Button>
             </div>
-
         </div>
     );
 }

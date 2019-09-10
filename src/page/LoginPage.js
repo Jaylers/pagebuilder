@@ -41,13 +41,14 @@ export default function LoginPage() {
                 }
             };
 
+            cookies.set(Application.LAST_USER, {"username" : username}, { path: '/'});
+
             Axios.post(ServiceApi.POST_LOGIN, request, config)
                 .then(function (response) {
                     let data = response.data;
                     if (data.status === "success"){
                         const user = data.data;
-                        cookies.set(Application.USER, user, { path: '/', expires: new Date(Date.now()+2592000)});
-                        cookies.set(Application.LAST_USER, {"username" : username}, { path: '/'});
+                        cookies.set(Application.USER, user, { path: '/', expires: new Date(Date.now()+3600000)});
                         verifyLogin();
                     }
                 })
