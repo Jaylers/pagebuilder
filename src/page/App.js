@@ -7,7 +7,6 @@ import TopBar from "../fragment/control/TopBar";
 import SideBar from "../fragment/control/SideBar";
 import Button from "reactstrap/es/Button";
 import Hamburger from "../asset/svg/menu.svg"
-import WelcomeFragment from "../fragment/WelcomeFragment";
 import HomeFragment from "../fragment/HomeFragment";
 
 function App() {
